@@ -1,6 +1,6 @@
-# Enunciado da questão
+# Crack de Senha:
 
-Crack de Senha: Escreva um programa que tente decifrar uma senha de 4 dígitos numéricos através de busca exaustiva.
+Escreva um programa que tente decifrar uma senha de 4 dígitos numéricos através de busca exaustiva.
 
 ```py
 senha = 4321
@@ -16,30 +16,47 @@ for elemento in lista:
         break
 ```
 
-# Enunciado da questão
+# Subconjunto com Soma Específica:
 
-Subconjunto com Soma Específica: Dado um conjunto de números inteiros e um valor de soma, crie um algoritmo que encontre todos os subconjuntos possíveis cuja soma seja igual ao valor dado.
+Dado um conjunto de números inteiros e um valor de soma, crie um algoritmo que encontre todos os subconjuntos possíveis cuja soma seja igual ao valor dado.
+
+```py
+def find_subconjunto(nums, resp):
+    def backtrack(start, path, curr_sum):
+        if curr_sum == resp:
+            result.append(path)
+            return
+        if curr_sum > resp:
+            return
+        for i in range(start, len(nums)):
+            backtrack(i + 1, path + [nums[i]], curr_sum + nums[i])
+
+    result = []
+    backtrack(0, [], 0)
+    return result
+
+nums = [33, 20, 15, 33, 40, 51, 46, 26]
+resp = 66
+subsets = find_subconjunto(nums, resp)
+print(f"Subconjuntos cuja soma é {resp}:", (subsets))
+```
+# Permutações de uma String:
+
+Implemente um algoritmo que gere todas as permutações possíveis de uma string dada.
 
 ```py
 
 ```
-# Enunciado da questão
+# Combinações de Moedas: 
 
-Permutações de uma String: Implemente um algoritmo que gere todas as permutações possíveis de uma string dada.
-
-```py
-
-```
-# Enunciado da questão
-
-Combinações de Moedas: Dado um conjunto de valores de moedas e um valor total, encontre todas as maneiras possíveis de combinar as moedas para alcançar o valor total.
+Dado um conjunto de valores de moedas e um valor total, encontre todas as maneiras possíveis de combinar as moedas para alcançar o valor total.
 
 ```py
 
 ```
-# Enunciado da questão
+# Problema do Caixeiro Viajante: 
 
-Problema do Caixeiro Viajante: Implemente uma solução de força bruta para o Problema do Caixeiro Viajante, onde você deve encontrar o caminho mais curto que passa por todas as cidades uma única vez e retorna à cidade de origem.
+Implemente uma solução de força bruta para o Problema do Caixeiro Viajante, onde você deve encontrar o caminho mais curto que passa por todas as cidades uma única vez e retorna à cidade de origem.
 
 ```py
 import networkx as nx
@@ -73,9 +90,9 @@ try:
 except ImportError as e:
     print("Para resolver o TSP, instale o pacote scipy: pip install scipy")
 ```
-# Enunciado da questão
+# Máximo Subarray:
 
-Máximo Subarray: Crie um algoritmo que encontre o subarray contíguo dentro de um array de números que tem a maior soma.
+Crie um algoritmo que encontre o subarray contíguo dentro de um array de números que tem a maior soma.
 
 ```py
 def max_nums(array:list) -> list:
@@ -91,9 +108,9 @@ array = max_nums(array)
 
 print(f"O array é {array} e a soma é: {sum(array)}")
 ```
-# Enunciado da questão
+# Anagramas de Palavra: 
 
-Anagramas de Palavra: Dada uma palavra, escreva um programa que encontre todos os anagramas possíveis desta palavra.
+Dada uma palavra, escreva um programa que encontre todos os anagramas possíveis desta palavra.
 
 ```py
 import itertools
@@ -109,16 +126,16 @@ anagramas_unicos = todos_os_anagramas(palavra)
 for i, palavra in enumerate(anagramas_unicos):
     print(f"{i}) {palavra}")
 ```
-# Enunciado da questão
+# Horários de Reunião: 
 
-Horários de Reunião: Dada uma lista de horários disponíveis para um grupo de pessoas, encontre todos os intervalos de tempo possíveis onde todos podem se reunir.
+Dada uma lista de horários disponíveis para um grupo de pessoas, encontre todos os intervalos de tempo possíveis onde todos podem se reunir.
 
 ```py
 
 ```
-# Enunciado da questão
+# Quebra de Código de Cofre: 
 
-Quebra de Código de Cofre: Suponha que um cofre é aberto com uma sequência específica de N botões pressionados. Desenvolva um algoritmo que tente todas as combinações possíveis até encontrar a sequência correta.
+Suponha que um cofre é aberto com uma sequência específica de N botões pressionados. Desenvolva um algoritmo que tente todas as combinações possíveis até encontrar a sequência correta.
 
 ```py
 
