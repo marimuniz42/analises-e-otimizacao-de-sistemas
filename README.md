@@ -1,4 +1,10 @@
-# Análises e Otimização de Sistemas
+# Análises e otimização de sistemas
+
+- Anne Besant da Costa Dutra.
+- Bernardo Gonçalves Spinelli Martins.
+- Leandro Gloss Fernandes.
+- Mariana Muniz da Rocha.
+- Paulo Ricardo Mesquita Rosa Santos.
 
 ## Sumário
 

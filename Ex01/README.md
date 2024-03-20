@@ -1,10 +1,5 @@
-# Análises e otimização de sistemas
+# Semana 1
 
-- Anne Besant da Costa Dutra.
-- Bernardo Gonçalves Spinelli Martins.
-- Leandro Gloss Fernandes.
-- Mariana Muniz da Rocha.
-- Paulo Ricardo Mesquita Rosa Santos.
 
 ## Enunciado da questão 1
 
