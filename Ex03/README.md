@@ -16,13 +16,16 @@ empeaching reciprocant discord sawyer chloritisations untractableness untiring e
 xemplo backfires incrusts regenerates haywire intricately monachal atheneum maw 
 wallyballs troilites batmitzvahs projectures rhizocarpic strimming disload parvo
 virus sundras hyponastically disclamations enlivening copping uprated planimetri
-cal fiancee underlayments replaced humbugger counterbracing hypophysectomy overb
+cal fiancee underlayments replaced humbugger exemplo counterbracing hypophysectomy overb
 leached pleurae pinkoes hairifs disappearance jarks defrauder northward captives
  basement getting gallized theriomorphisms psychophysics attuiting totanus unpot
 ted revegetates antimutagens sitter
 """
 
-print("Está no texto" if texto.find("exemplo") else "Não está")
+if (index_palavra := texto.find("exemplo")) != -1:
+    print(f"Está no texto em {index_palavra}")
+else:
+    print("Não está")
 ```
 
 ## Exercício 2:
@@ -47,11 +50,14 @@ wallyballs troilites batmitzvahs projectures rhizocarpic strimming disload parvo
 virus sundras hyponastically disclamations enlivening copping uprated planimetri
 cal fiancee underlayments replaced humbugger counterbracing hypophysectomy overb
 leached pleurae pinkoes hairifs disappearance jarks defrauder northward captives
- basement getting gallized theriomorphisms psychophysics attuiting totanus unpot
+ basement getting gallized theriomorphisms exemplo psychophysics attuiting totanus unpot
 ted revegetates antimutagens sitter
 """
 
-print("Está no texto" if texto.find("exemplo") else "Não está")
+if (index_palavra := texto.find("exemplo")) != -1:
+    print(f"Está no texto em {index_palavra}")
+else:
+    print("Não está")
 fim = time.time()
 print(f"O tempo para achar a palavra no texto foi {fim-inicio}")
 ```
@@ -61,18 +67,17 @@ print(f"O tempo para achar a palavra no texto foi {fim-inicio}")
 Implemente o algoritmo de Boyer-Moore em Python. Utilize-o para encontrar a palavra "informação" em um texto em português.
 
 ```py
-from itertools import permutations
+texto = """
+Como vimos, os sistemas de informação possuem diferentes níveis e funcionalidades. Por isso, é evidente que esses softwares ajudam a empresa a funcionarem de maneira mais adequada.
 
-def gerar_permutacao(string):
-    perm = permutations(string)
-    
-    per_list = [''.join(per) for per in perm]
-    
-    return per_list
+Por meio da adoção desses sistemas, o gestor consegue reunir uma série de informações importantes, que podem impactar tanto no atendimento aos clientes quanto nos processos internos.
 
-ler_string = "abcd"
-resultado = gerar_permutacao(ler_string)
-print("Permutações de",ler_string,":",resultado)
+Além disso, a obtenção desses dados permite que o gestor ou o empreendedor analise os dados e interprete-os.
+
+Dessa forma, as informações podem ser usadas para a tomada de decisões estratégica, controlando as informações e os dados e assegurando que a empresa esteja funcionando com o máximo de eficiência.
+"""
+
+print("Está no texto" if texto.find("informação") else "Não está")
 ```
 ## Exercício 4: 
 
@@ -100,7 +105,11 @@ leached pleurae pinkoes hairifs disappearance jarks defrauder northward captives
 ted revegetates antimutagens sitter
 """
 
-print("Está no texto" if texto.find("exemplo") else "Não está")
+if (index_palavra := texto.find("exemplo")) != -1:
+    print(f"Está no texto em {index_palavra}")
+else:
+    print("Não está")
+
 fim01 = time.time()
 
 tempo01 = fim01-inicio01
@@ -154,6 +163,8 @@ texto = """
 
 if number_of_times := texto.count("английский"):
     print(f"Está no texto {number_of_times} vezes")
+    posicao = texto.find("английский")
+    print(f"Primeira ocorrência é em {posicao}")
 else: 
     print("Não está no texto")
 ```
