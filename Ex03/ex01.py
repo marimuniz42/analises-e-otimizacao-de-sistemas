@@ -9,10 +9,13 @@ empeaching reciprocant discord sawyer chloritisations untractableness untiring e
 xemplo backfires incrusts regenerates haywire intricately monachal atheneum maw 
 wallyballs troilites batmitzvahs projectures rhizocarpic strimming disload parvo
 virus sundras hyponastically disclamations enlivening copping uprated planimetri
-cal fiancee underlayments replaced humbugger counterbracing hypophysectomy overb
+cal fiancee underlayments replaced humbugger exemplo counterbracing hypophysectomy overb
 leached pleurae pinkoes hairifs disappearance jarks defrauder northward captives
  basement getting gallized theriomorphisms psychophysics attuiting totanus unpot
 ted revegetates antimutagens sitter
 """
 
-print("Está no texto" if texto.find("exemplo") else "Não está")
+if (index_palavra := texto.find("exemplo")) != -1:
+    print(f"Está no texto em {index_palavra}")
+else:
+    print("Não está")

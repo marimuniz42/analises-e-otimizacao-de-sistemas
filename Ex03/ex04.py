@@ -19,7 +19,11 @@ leached pleurae pinkoes hairifs disappearance jarks defrauder northward captives
 ted revegetates antimutagens sitter
 """
 
-print("Está no texto" if texto.find("exemplo") else "Não está")
+if (index_palavra := texto.find("exemplo")) != -1:
+    print(f"Está no texto em {index_palavra}")
+else:
+    print("Não está")
+
 fim01 = time.time()
 
 tempo01 = fim01-inicio01
