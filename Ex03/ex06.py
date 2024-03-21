@@ -7,4 +7,3 @@ if number_of_times := texto.count("английский"):
     print(f"Está no texto {number_of_times} vezes")
 else: 
     print("Não está no texto")
-    
