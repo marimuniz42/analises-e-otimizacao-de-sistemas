@@ -136,14 +136,26 @@ print(f"A diferença de tempo entre os dois textos foi de {tempo02-tempo01}")
 Modifique o algoritmo de Boyer-Moore para tratar casos de textos e padrões em alfabetos não latinos, por exemplo, em caracteres cirílicos.
 
 ```py
+texto = """
+Улучшить английский язык. Я достаточно хорошо говорю на английском, но, если я хочу устроиться работу в международную компанию, моего уровня будет недостаточно. Мне нужно будет пройти дополнительные курсы бизнес-английского и получить сертификат.
+"""
 
+print("Está no texto" if texto.find("английский") else "Não está")
 ```
 ## Exercício 6:
 
 Crie um algoritmo que utilize o Boyer-Moore para encontrar todas as ocorrências não sobrepostas de um padrão em um texto e retorne as posições iniciais dessas ocorrências.
 
 ```py
+texto = """
+Улучшить английский язык. Я достаточно хорошо говорю на английском, но, если я хочу устроиться работу в международную компанию, английский моего уровня будет недостаточно. Мне нужно будет пройти дополнительные курсы бизнес-английского и получить сертификат.
+"""
 
+
+if number_of_times := texto.count("английский"):
+    print(f"Está no texto {number_of_times} vezes")
+else: 
+    print("Não está no texto")
 ```
 
 ## Exercício 7:
@@ -151,7 +163,19 @@ Crie um algoritmo que utilize o Boyer-Moore para encontrar todas as ocorrências
 Implemente uma função em Python que utilize o algoritmo de Boyer-Moore para verificar se uma palavra é parte de qualquer entrada de uma lista de strings.
 
 ```py
+import re
 
+palavra = input("Digite uma palavra de entrada: ")
+
+outras_palavras = [ i for i in input("Digite outras palavras separadas por espaço: ").split()] 
+
+esta_no_texto = lambda expressao: re.search(f"^{palavra}",expressao)
+
+array = filter(esta_no_texto,outras_palavras)
+
+array_len = list(array)
+
+print("Tem na lista de palavras" if len(array_len) > 0 else "Não tem na lista de palavras")
 ```
 
 ## Exercício 8: 
@@ -159,7 +183,19 @@ Implemente uma função em Python que utilize o algoritmo de Boyer-Moore para ve
 Desenvolva um script que use o algoritmo de Boyer-Moore para encontrar e destacar todas as ocorrências de uma lista de palavras em um texto.
 
 ```py
+import re
 
+texto = """
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+"""
+
+lista_de_palavras = ["voluptatem","ut","dolorem","quae","quidem"]
+
+for palavra in lista_de_palavras:
+    if number_of_times := len(re.findall(palavra,texto)):
+        print(f"{palavra} está no texto {number_of_times} vezes")
+    else:
+        print(f"{palavra} não está no texto")
 ```
 
 ## Exercício 9:
@@ -167,7 +203,19 @@ Desenvolva um script que use o algoritmo de Boyer-Moore para encontrar e destaca
 Modifique o algoritmo de Boyer-Moore para fornecer um feedback sobre a presença de um padrão em um texto, indicando não apenas a posição da primeira ocorrência, mas também quantas vezes o padrão foi encontrado.
 
 ```py
+import re
 
+texto = """
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+"""
+
+lista_de_palavras = ["voluptatem","ut","dolorem","quae","quidem"]
+
+for palavra in lista_de_palavras:
+    if number_of_times := len(re.findall(palavra,texto)):
+        print(f"{palavra} está no texto {number_of_times} vezes")
+    else:
+        print(f"{palavra} não está no texto")
 ```
 
 ## Exercício 10:
@@ -175,5 +223,19 @@ Modifique o algoritmo de Boyer-Moore para fornecer um feedback sobre a presença
 Implemente uma versão do algoritmo de Boyer-Moore que seja insensível a maiúsculas e minúsculas durante a busca de um padrão em um texto.
 
 ```py
+import re
 
+texto = """
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+"""
+
+texto = texto.upper()
+
+lista_de_palavras = ["voluptatem","ut","dolorem","quae","quidem"]
+
+for palavra in lista_de_palavras:
+    if number_of_times := len(re.findall(palavra.upper(),texto)):
+        print(f"{palavra} está no texto {number_of_times} vezes")
+    else:
+        print(f"{palavra} não está no texto")
 ```

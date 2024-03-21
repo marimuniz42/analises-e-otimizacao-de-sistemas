@@ -11,5 +11,3 @@ for palavra in lista_de_palavras:
         print(f"{palavra} está no texto {number_of_times} vezes")
     else:
         print(f"{palavra} não está no texto")
-
-

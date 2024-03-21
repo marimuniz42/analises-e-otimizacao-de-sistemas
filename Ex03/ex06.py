@@ -9,4 +9,3 @@ if number_of_times := texto.count("английский"):
     print(f"Primeira ocorrência é em {posicao}")
 else: 
     print("Não está no texto")
-    
