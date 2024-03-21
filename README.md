@@ -10,3 +10,4 @@
 
 - [Exercício 1](./Ex01/README.md)
 - [Exercício 2](./Ex02/README.md)
+- [Exercício 3](./Ex03/README.md)
